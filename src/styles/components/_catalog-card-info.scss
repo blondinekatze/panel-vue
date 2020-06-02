@@ -1,0 +1,29 @@
+.c-catalog-card-info {
+    &__top {
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+        border-bottom: 1px solid rgba(#fff,.1);
+    }
+    &__title {
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 39px;
+    }
+    &__item {
+        margin-top: 30px;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+
+    &__bottom {
+        border-top: 1px solid rgba(#fff,.1);
+        padding-top: 25px;
+        margin-top: 25px;
+    }
+    .c-properties-item {
+        &__inner {
+            background-color: #23244D;
+        }
+    }
+}

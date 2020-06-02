@@ -1,0 +1,15 @@
+.o-content {
+    padding: 30px;
+
+
+    @media (orientation: landscape) {
+        &__wrap {
+            padding-right: 170px;
+        }
+    }
+    @media (orientation: portrait) {
+        &__wrap {
+            padding-top: 170px;
+        }
+    }
+}

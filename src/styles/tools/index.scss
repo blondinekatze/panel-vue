@@ -1,0 +1,29 @@
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin bg-on-before($bg-color) {
+    position: relative;
+    &:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: -1999px;
+        bottom: 0;
+        left: -1999px;
+        z-index: -1;
+        background-color: $bg-color;
+    }
+}

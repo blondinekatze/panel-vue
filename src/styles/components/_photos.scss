@@ -1,0 +1,33 @@
+.c-photos {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        position: relative;
+        flex-grow: 0;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border: 1px solid $color-bg--body;
+        transition: all .2s linear;
+        display: block;
+    }
+
+    @media (orientation: landscape) {
+        &__item {
+            width: 33.33333%;
+            height: 47.5vh;
+        }
+    }
+    @media (orientation: portrait) {
+        &__item {
+            width: 50%;
+            height: 33.3vh;
+            &:nth-child(3n) {
+                width: 100%;
+            }
+        }
+    }
+}

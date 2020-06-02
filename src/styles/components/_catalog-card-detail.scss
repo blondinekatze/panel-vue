@@ -1,0 +1,46 @@
+.c-catalog-card-detail {
+    &__inner {
+        padding: 25px;
+        background-color: #23244d;
+        border-radius: 10px;
+    }
+    &__subtitle {
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+    &__txt {
+        color: rgba(255, 255, 255, .5);
+    }
+    &__top {
+        margin-bottom: 30px;
+    }
+    &__back {
+        display: flex;
+
+    }
+
+    @media (orientation: landscape) {
+        &__wrap {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            margin-left: -15px;
+
+            .c-catalog-card-detail {
+                &__inner {
+                    width: 100%;
+                    margin-left: 15px;
+                    &.info {
+                        flex-shrink: 0;
+                        width: 540px;
+                    }
+                }
+            }
+        }
+    }
+    @media (orientation: portrait) {
+        &__inner {
+            margin-bottom: 15px;
+        }
+    }
+}

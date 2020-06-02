@@ -1,0 +1,15 @@
+.c-card-colors {
+    display: flex;
+    margin-left: -20px;
+
+    &__item {
+        width: 40px;
+        height: 40px;
+        margin-left: 20px;
+        border-radius: 50%;
+        &.active {
+            box-shadow: 0 0 0 5px rgba($color--active,.2);
+            border: 3px solid $color--active;
+        }
+    }
+}

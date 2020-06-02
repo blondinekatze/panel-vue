@@ -1,0 +1,24 @@
+.c-catalog {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @media (orientation: landscape) {
+        &__list {
+            margin: -50px 0 0 -2.5%;
+            .c-catalog-card {
+                width: 22.5%;
+                margin: 50px 0 0 2.5%;
+            }
+        }
+    }
+    @media (orientation: portrait) {
+        &__list {
+            margin: -50px 0 0 -1.5%;
+        }
+        .c-catalog-card {
+            width: 31.8%;
+            margin: 50px 0 0 1.5%;
+        }
+    }
+}

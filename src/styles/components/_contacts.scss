@@ -1,0 +1,12 @@
+.c-contacts {
+    padding: 40px 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    &__item {
+        margin-top: 30px;
+    }
+    &__name {
+        color: rgba(#fff,.5);
+        margin-bottom: 10px;
+    }
+}

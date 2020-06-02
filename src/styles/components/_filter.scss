@@ -1,0 +1,9 @@
+.c-filter {
+    padding-bottom: 33px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid rgba(#fff,.2);
+    &__list {
+        display: flex;
+        margin-left: -16px;
+    }
+}

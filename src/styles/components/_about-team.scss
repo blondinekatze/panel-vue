@@ -1,0 +1,26 @@
+.c-about-team {
+    margin-top: 100px;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media (orientation: landscape) {
+        &__list {
+            margin: -16px 0 0 -1.5%;
+            .c-about-card {
+                width: 23.5%;
+                margin: 16px 0 0 1.5%;
+            }
+        }
+    }
+    @media (orientation: portrait) {
+        &__list {
+            margin: -24px 0 0 -1.5%;
+        }
+        .c-about-card {
+            width: 31.8%;
+            margin: 24px 0 0 1.5%;
+        }
+    }
+}

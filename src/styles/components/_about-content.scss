@@ -1,0 +1,16 @@
+.c-about-content {
+    &__rows {
+        background-color: #23244D;
+        border-radius: 10px;
+    }
+    @media (orientation: landscape) {
+        &__rows {
+            padding: 65px;
+        }
+    }
+    @media (orientation: portrait) {
+        &__rows {
+            padding: 30px 25px;
+        }
+    }
+}

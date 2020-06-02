@@ -1,0 +1,1 @@
+export const IDLE_TIME = 300000;

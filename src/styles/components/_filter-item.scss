@@ -1,0 +1,11 @@
+.c-filter-item {
+    flex-grow: 1;
+    margin-left: 16px;
+    &.btn {
+        align-self: flex-end;
+    }
+    &__lbl {
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,23 @@
+.c-properties-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 2px -5px;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        border-bottom: 1px dashed #98999C;
+    }
+    &__inner {
+        z-index: 1;
+        padding: 0 5px;
+        background-color: $color-bg--body;
+        position: relative;
+        bottom: -1px;
+        color: rgba($color--primary,.5);
+    }
+}

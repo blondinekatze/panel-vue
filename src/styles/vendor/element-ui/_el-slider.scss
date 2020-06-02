@@ -1,0 +1,28 @@
+.el-slider {
+    &__runway {
+        height: 3px;
+    }
+    &__bar {
+        height: 3px;
+    }
+    &__button {
+        width: 30px;
+        height: 30px;
+        border: 1px solid #dde2eb;
+        transform: none!important;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 14px;
+            height: 14px;
+            background-color: $color--active;
+            border-radius: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+    &__button-wrapper {
+        top: -17px;
+    }
+}

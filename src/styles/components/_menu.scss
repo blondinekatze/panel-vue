@@ -1,0 +1,28 @@
+.c-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    padding: 30px;
+    background: $color-bg--body;
+
+    &__list {
+        display: flex;
+        height: 100%;
+        background: $color--bg-menu;
+        border-radius: 10px;
+    }
+    @media (orientation: landscape) {
+        bottom: 0;
+        &__list {
+            flex-direction: column;
+            width: 140px;
+        }
+    }
+    @media (orientation: portrait) {
+        left: 0;
+        &__list {
+            height: 140px;
+        }
+    }
+}
