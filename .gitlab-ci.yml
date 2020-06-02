@@ -1,0 +1,60 @@
+image: gitlab.1gt.ru:4567/1gt/docker-images/vue-deploy:10
+
+stages:
+  - install_dependencies
+  - build
+  - deploy
+
+install_dependencies:
+  stage: install_dependencies
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - node_modules/
+    policy: pull-push
+  script:
+    - npm ci
+  only:
+    refs:
+      - master
+    changes:
+      - package.json
+      - package-lock.json
+
+build:
+  stage: build
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - node_modules/
+    policy: pull
+  script:
+    - npx vue-cli-service build
+  artifacts:
+    paths:
+      - dist
+  only:
+    - master
+  except:
+    changes:
+      - "*.md"
+  tags:
+    - docker-build
+
+deploy:
+  stage: deploy
+  before_script:
+    - mkdir -p ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" >> ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+  script:
+    - rsync -rav --delete dist/ infopanel@panel-vue.1gt.ru:~/www/panel-vue.1gt.ru
+    - ssh infopanel@panel-vue.1gt.ru 'sh json-server'
+  environment:
+    name: production
+    url: https://panel-vue.1gt.ru
+  only:
+    - master
+  tags:
+    - docker-build
