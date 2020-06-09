@@ -1,5 +1,3 @@
-# panel-1gt
-
 ## Project setup
 ```
 npm install
